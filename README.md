@@ -1,5 +1,4 @@
-# TALLER DE WEBSCRAPING CON PYTHON
-# ================================
+# TALLER DE WEBSCRAPING CON PYTHON 02/03/2018
 (Pablo)
 
 ## Python
@@ -30,8 +29,54 @@ REPL (o iPython)
 6. Procesar los datos
 7. (Volver a 3 si hay más urls)
 
+## Problemas o retos
+- GET vs POST (requests con parámetros)
+- Cookies (request permite gestionar cookies)
+- Comportamiento robótico (captchas, slides,... hay librerías que permiten resolverlos, crowsourcing)
+- Multi-hilo (cuando se necesita recoger gran cantidad de datos)
+- Multi-máquinas (para evitar repetir la misma IP)
+- Banear IPs (distintas máquinas o desde distintos servidores, VPN (cambia IP a menudo))
+  - Recomendable trabajar con VPN (tunel via, 50 €/año)
+- Cambios en el HTML (rediseño web, test AB (marketing))
+
+## Algunos proyectos
+
+- TIPI Ciudadano (GitHub)
+- LibreBORME (Boletín Oficial del Registro Mercantil)
+- Proyecto Colibrí (GitHub. Votaciones del congreso -> API)
+- BOE API (GitHub)
+- Canales de chollos de Telegram
+
+
+
+
+
 
 --------------
 
 sudo apt install python-pip
 pip freeze (indica todo lo que está instalado)
+iPython (consola)
+
+
+
+Paquetes principales:
+- requests
+- beautifulsoup4
+
+GET: requests
+POST: requests.post
+
+
+
+`dir(variable)`: indica los atributos que tiene la variable
+
+`soup = BeautifulSoup(req.text, "html.parser")`: parsea el contenido de la web
+
+con `soup.h2` obtenemos los h2
+
+```
+contacts = soup.find_all("a", class_="contact")
+contacts[0]['href']
+contacts[0].text
+```
