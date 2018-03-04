@@ -1,5 +1,5 @@
 # TALLER DE WEBSCRAPING CON PYTHON 02/03/2018
-(Pablo)
+(Pablo Martin - https://github.com/pr3ssh/webscraper-idealista-viviendas-alquiler)
 
 ## Python
 - Débilmente tipado
